@@ -118,10 +118,11 @@ The project is structured around OOP principles, particularly encapsulation, inh
 
 To compile the project, use the provided `Makefile`. Run the following command in your terminal:
 
-```bash
-make
-```
-This will compile all source files and produce the executable.
+## **Build Instructions**
+1. **Install Dependencies**: Ensure you have GCC and make installed.
+2. **Compile the Project**: Run `make` in the project directory to compile the source files and build the executable.
+3. **Generate Dependencies**: Run `make deps` to generate dependencies for the project.
+4. **Clean the Build Directory**: Run `make clean` to remove generated files.
 
 To run the game, execute the following command:
 ```bash
