@@ -1,0 +1,68 @@
+\hypertarget{classBonus}{}\doxysection{Bonus Class Reference}
+\label{classBonus}\index{Bonus@{Bonus}}
+
+
+Class which defines a behaviour for bonuses. \mbox{\hyperlink{classBonus}{Bonus}} can be randomly spawned after the wall explosion. After the \mbox{\hyperlink{classPlayer}{Player}} \char`\"{}picks up\char`\"{} a bonus, it grants a certain effect, extends \mbox{\hyperlink{classGameObject}{Game\+Object}}.  
+
+
+
+
+{\ttfamily \#include $<$Bonus.\+h$>$}
+
+
+
+Inheritance diagram for Bonus\+:
+% FIG 0
+
+
+Collaboration diagram for Bonus\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBonus_a5193a8d966d15ed6143565ac34bf53f7}{Bonus}} (int x\+\_\+coord, int y\+\_\+coord, SDL\+\_\+\+Texture $\ast$p\+\_\+texture, string p\+\_\+tag\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Overloaded construction for the \mbox{\hyperlink{classBonus}{Bonus}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBonus_a4c3f8ce5ecef4e1edacba7d0df4287c5}\label{classBonus_a4c3f8ce5ecef4e1edacba7d0df4287c5}} 
+void \mbox{\hyperlink{classBonus_a4c3f8ce5ecef4e1edacba7d0df4287c5}{update}} () override
+\begin{DoxyCompactList}\small\item\em No implementation, we don\`{}t need need to update position of the bonus as its static. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBonus_a37f77ac2e658f92b56225126db44d38d}\label{classBonus_a37f77ac2e658f92b56225126db44d38d}} 
+void \mbox{\hyperlink{classBonus_a37f77ac2e658f92b56225126db44d38d}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Each object should have a draw function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBonus_ac1c2a384313539ff5966c546c893c49e}\label{classBonus_ac1c2a384313539ff5966c546c893c49e}} 
+int \mbox{\hyperlink{classBonus_ac1c2a384313539ff5966c546c893c49e}{scale}} = 2
+\begin{DoxyCompactList}\small\item\em Size scale of each bonus object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class which defines a behaviour for bonuses. \mbox{\hyperlink{classBonus}{Bonus}} can be randomly spawned after the wall explosion. After the \mbox{\hyperlink{classPlayer}{Player}} \char`\"{}picks up\char`\"{} a bonus, it grants a certain effect, extends \mbox{\hyperlink{classGameObject}{Game\+Object}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBonus_a5193a8d966d15ed6143565ac34bf53f7}\label{classBonus_a5193a8d966d15ed6143565ac34bf53f7}} 
+\index{Bonus@{Bonus}!Bonus@{Bonus}}
+\index{Bonus@{Bonus}!Bonus@{Bonus}}
+\doxysubsubsection{\texorpdfstring{Bonus()}{Bonus()}}
+{\footnotesize\ttfamily Bonus\+::\+Bonus (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+coord,  }\item[{int}]{y\+\_\+coord,  }\item[{SDL\+\_\+\+Texture $\ast$}]{p\+\_\+texture,  }\item[{string}]{p\+\_\+tag\+\_\+obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded construction for the \mbox{\hyperlink{classBonus}{Bonus}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+coord} & position at x-\/axis \\
+\hline
+{\em y\+\_\+coord} & position at x-\/axis \\
+\hline
+{\em bonus\+\_\+id} & unique id of the bonus type \\
+\hline
+{\em p\+\_\+tag\+\_\+obj} & unique tag for each bonus type \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Bonus.\+h\end{DoxyCompactItemize}

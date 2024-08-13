@@ -1,0 +1,14 @@
+digraph "Bomb"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Bomb",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Class, which manages bomb placement for the Player, extends GameObject."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GameObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameObject.html",tooltip="Base class for all entities in the game."];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" position_b" ,fontname="Helvetica"];
+  Node3 [label="Vector2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVector2D.html",tooltip="Class for physics and math for our game."];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transformObject_b" ,fontname="Helvetica"];
+  Node4 [label="TransformObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTransformObject.html",tooltip="Class for defining objects speed, scale, height and width."];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" position\nvelocity" ,fontname="Helvetica"];
+}

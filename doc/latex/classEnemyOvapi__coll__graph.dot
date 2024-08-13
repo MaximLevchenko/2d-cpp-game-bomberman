@@ -1,0 +1,18 @@
+digraph "EnemyOvapi"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="EnemyOvapi",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Smart type of an Enemy, uses BFS to find the shortest path to a Player, extends Enemy."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Enemy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEnemy.html",tooltip="Class for defining common behaviour for the enemy, extends GameObject."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="GameObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameObject.html",tooltip="Base class for all entities in the game."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" position" ];
+  Node4 [label="Vector2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVector2D.html",tooltip="Class for physics and math for our game."];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transformObject" ];
+  Node5 [label="TransformObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTransformObject.html",tooltip="Class for defining objects speed, scale, height and width."];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" position\nvelocity" ];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" position" ];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transformObject" ];
+}

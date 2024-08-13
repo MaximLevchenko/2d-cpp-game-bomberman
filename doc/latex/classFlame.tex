@@ -1,0 +1,48 @@
+\hypertarget{classFlame}{}\doxysection{Flame Class Reference}
+\label{classFlame}\index{Flame@{Flame}}
+
+
+Class which describes a behaviour of a flame object, which is created after the bomb explosion, extends \mbox{\hyperlink{classGameObject}{Game\+Object}}.  
+
+
+
+
+{\ttfamily \#include $<$Flame.\+h$>$}
+
+
+
+Inheritance diagram for Flame\+:
+% FIG 0
+
+
+Collaboration diagram for Flame\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFlame_ad03b8964deade494a55d6231a6cd2136}\label{classFlame_ad03b8964deade494a55d6231a6cd2136}} 
+\mbox{\hyperlink{classFlame_ad03b8964deade494a55d6231a6cd2136}{Flame}} (SDL\+\_\+\+Texture $\ast$p\+\_\+tex, int p\+\_\+x, int p\+\_\+y, int p\+\_\+w, int p\+\_\+h, std\+::string p\+\_\+tag\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor, sets up the position, texture and tag of the object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFlame_aae284d0484f9c56dd2dbe1bb3e11b1db}\label{classFlame_aae284d0484f9c56dd2dbe1bb3e11b1db}} 
+void \mbox{\hyperlink{classFlame_aae284d0484f9c56dd2dbe1bb3e11b1db}{update}} () override
+\begin{DoxyCompactList}\small\item\em Each frame decreases its screen time, when screen time hits 0 -\/---$>$ we remove this object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFlame_a93278ba418a818ac1236519cdd7787a9}\label{classFlame_a93278ba418a818ac1236519cdd7787a9}} 
+void \mbox{\hyperlink{classFlame_a93278ba418a818ac1236519cdd7787a9}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Draws a flame to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFlame_a54452e42a0405e3ed26a060f3b92ce8d}\label{classFlame_a54452e42a0405e3ed26a060f3b92ce8d}} 
+int {\bfseries scale} = 2
+\item 
+\mbox{\Hypertarget{classFlame_a5c7eddf1a8d0600326779833eb6c8e8a}\label{classFlame_a5c7eddf1a8d0600326779833eb6c8e8a}} 
+int {\bfseries screen\+Time} = 30
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class which describes a behaviour of a flame object, which is created after the bomb explosion, extends \mbox{\hyperlink{classGameObject}{Game\+Object}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Flame.\+h\end{DoxyCompactItemize}

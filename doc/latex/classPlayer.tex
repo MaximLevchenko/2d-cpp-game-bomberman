@@ -1,0 +1,128 @@
+\hypertarget{classPlayer}{}\doxysection{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+
+
+Class for defining player\`{}s behaviour.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Inheritance diagram for Player\+:
+% FIG 0
+
+
+Collaboration diagram for Player\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlayer_aaa23b3bf80e8c0267cf08d4fe4d6ddc1}\label{classPlayer_aaa23b3bf80e8c0267cf08d4fe4d6ddc1}} 
+\mbox{\hyperlink{classPlayer_aaa23b3bf80e8c0267cf08d4fe4d6ddc1}{Player}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlayer_af6125a1fcb081137f1639f88560b95ec}\label{classPlayer_af6125a1fcb081137f1639f88560b95ec}} 
+{\bfseries Player} (const char $\ast$filename)
+\item 
+\mbox{\Hypertarget{classPlayer_ab02001a3358e1d5f97b9ea671ecd611a}\label{classPlayer_ab02001a3358e1d5f97b9ea671ecd611a}} 
+\mbox{\hyperlink{classPlayer_ab02001a3358e1d5f97b9ea671ecd611a}{Player}} (const char $\ast$filename, int x, int y, string p\+\_\+tag\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor, initializes position, sets up texture and gives a tile id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlayer_a6912bb6e48efb5845d59f0f4582827ef}\label{classPlayer_a6912bb6e48efb5845d59f0f4582827ef}} 
+void \mbox{\hyperlink{classPlayer_a6912bb6e48efb5845d59f0f4582827ef}{update}} () override
+\begin{DoxyCompactList}\small\item\em Updates a position of a player, detects if bomb was placed, detects if flames should be deleted from the map, explodes a bomb. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlayer_a7abe0fbf95b42b9ff4a2c0c7d334bc68}\label{classPlayer_a7abe0fbf95b42b9ff4a2c0c7d334bc68}} 
+void \mbox{\hyperlink{classPlayer_a7abe0fbf95b42b9ff4a2c0c7d334bc68}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Draws a player to the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlayer_aa2cf3d8f4ea651a4384120e394d0d762}\label{classPlayer_aa2cf3d8f4ea651a4384120e394d0d762}} 
+void \mbox{\hyperlink{classPlayer_aa2cf3d8f4ea651a4384120e394d0d762}{set\+Tex}} (const char $\ast$p\+\_\+filename)
+\begin{DoxyCompactList}\small\item\em Sets up a texture for the player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlayer_a6eacb2d38e8fe4ee5dd7ec472129f767}\label{classPlayer_a6eacb2d38e8fe4ee5dd7ec472129f767}} 
+void \mbox{\hyperlink{classPlayer_a6eacb2d38e8fe4ee5dd7ec472129f767}{place\+Bomb}} ()
+\begin{DoxyCompactList}\small\item\em Places a bomb on the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlayer_acdff1e2b7f7acbcd1dd6b76b4a24fdab}\label{classPlayer_acdff1e2b7f7acbcd1dd6b76b4a24fdab}} 
+void \mbox{\hyperlink{classPlayer_acdff1e2b7f7acbcd1dd6b76b4a24fdab}{explode\+Bomb}} (unique\+\_\+ptr$<$ \mbox{\hyperlink{classBomb}{Bomb}} $>$ \&bomb)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classBomb}{Bomb}} explosion, destroys breakable walls if they are in range of a fire. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_aa515ae7ae660958cb0163c1cc4893e9a}{is\+Wall\+On\+Tile}} (int x\+\_\+coord, int y\+\_\+coord, int id\+\_\+tile)
+\begin{DoxyCompactList}\small\item\em OChecks if there is a wall on given coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlayer_ae36c3c8c9d3715f1a829103382996a10}\label{classPlayer_ae36c3c8c9d3715f1a829103382996a10}} 
+void \mbox{\hyperlink{classPlayer_ae36c3c8c9d3715f1a829103382996a10}{change\+Map\+Array\+And\+Map\+Object}} (int y\+\_\+coord, int x\+\_\+coord, int y\+\_\+resolution, SDL\+\_\+\+Texture $\ast$p\+\_\+texture)
+\begin{DoxyCompactList}\small\item\em Changes our map accordingly to the bomb explosion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a257fd4994479f00c1cd90c272b71900e}{add\+Effect}} (string p\+\_\+tag\+\_\+bonus)
+\begin{DoxyCompactList}\small\item\em Adds an effect if the player picked up a bonus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlayer_a7058209fbb0b3dc71944448a12d3dea1}\label{classPlayer_a7058209fbb0b3dc71944448a12d3dea1}} 
+bool {\bfseries bomb\+Is\+Placed} = false
+\item 
+\mbox{\Hypertarget{classPlayer_a02d493fffe3710f0180aa7c10cda01ea}\label{classPlayer_a02d493fffe3710f0180aa7c10cda01ea}} 
+int {\bfseries flame\+Range} = 1
+\item 
+\mbox{\Hypertarget{classPlayer_ae539a1807563b32fb65f9c301395f7de}\label{classPlayer_ae539a1807563b32fb65f9c301395f7de}} 
+int {\bfseries flame\+Increase\+Counter} = 0
+\item 
+\mbox{\Hypertarget{classPlayer_ad272e9944b5bdd741c7364bc62248308}\label{classPlayer_ad272e9944b5bdd741c7364bc62248308}} 
+\mbox{\hyperlink{classVector2D}{Vector2D}} {\bfseries position}
+\item 
+\mbox{\Hypertarget{classPlayer_a494f70988e24fff87106a04c1d7f019b}\label{classPlayer_a494f70988e24fff87106a04c1d7f019b}} 
+\mbox{\hyperlink{classKeyboardController}{Keyboard\+Controller}} {\bfseries keyboard\+Controller}
+\item 
+\mbox{\Hypertarget{classPlayer_a20b08bb3305452cec1ba63a8c637055e}\label{classPlayer_a20b08bb3305452cec1ba63a8c637055e}} 
+vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{classBomb}{Bomb}} $>$ $>$ \mbox{\hyperlink{classPlayer_a20b08bb3305452cec1ba63a8c637055e}{bomb\+Container}}
+\begin{DoxyCompactList}\small\item\em Container for storing \mbox{\hyperlink{classBomb}{Bomb}} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlayer_af65baa13e40199de550f0e8684cac4ca}\label{classPlayer_af65baa13e40199de550f0e8684cac4ca}} 
+static vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{classFlame}{Flame}} $>$ $>$ \mbox{\hyperlink{classPlayer_af65baa13e40199de550f0e8684cac4ca}{flames}}
+\begin{DoxyCompactList}\small\item\em Container for storing FLame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for defining player\`{}s behaviour. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayer_a257fd4994479f00c1cd90c272b71900e}\label{classPlayer_a257fd4994479f00c1cd90c272b71900e}} 
+\index{Player@{Player}!addEffect@{addEffect}}
+\index{addEffect@{addEffect}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{addEffect()}{addEffect()}}
+{\footnotesize\ttfamily void Player\+::add\+Effect (\begin{DoxyParamCaption}\item[{string}]{p\+\_\+tag\+\_\+bonus }\end{DoxyParamCaption})}
+
+
+
+Adds an effect if the player picked up a bonus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & tag ob the bonus type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_aa515ae7ae660958cb0163c1cc4893e9a}\label{classPlayer_aa515ae7ae660958cb0163c1cc4893e9a}} 
+\index{Player@{Player}!isWallOnTile@{isWallOnTile}}
+\index{isWallOnTile@{isWallOnTile}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{isWallOnTile()}{isWallOnTile()}}
+{\footnotesize\ttfamily bool Player\+::is\+Wall\+On\+Tile (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+coord,  }\item[{int}]{y\+\_\+coord,  }\item[{int}]{id\+\_\+tile }\end{DoxyParamCaption})}
+
+
+
+OChecks if there is a wall on given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+coord} & x-\/axis coordinate of the wall \\
+\hline
+{\em y\+\_\+coord} & y-\/axis coordinate of the wall \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if breakable wall is on the given coordinates, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Player.\+h\item 
+src/Game.\+cpp\item 
+src/Player.\+cpp\end{DoxyCompactItemize}
